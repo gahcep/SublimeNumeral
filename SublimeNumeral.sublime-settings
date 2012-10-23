@@ -1,0 +1,35 @@
+{
+    // Option is useful when trying to convert under ambiguous situation,
+    // e.g. 1000 - could be either BIN or DEC or HEX
+    // Available options: decimal, hexadecimal and binary
+    "opt_prefer_numeral": "binary",
+
+    // Set if all letters included in a number will be capitalized.
+    // E.g. 0x100fcc -> 0x100FCC
+    "opt_capitalize": false,
+
+    // Set if prefix '0b' will be used for outputting a binary numbers.
+    "opt_binary_use_prefix": true,
+    
+    // Set if prefix '0b' will be used for outputting a hexadecimal numbers.
+    "opt_hexadecimal_use_prefix": true,
+    
+    // Fill a binary number with a zeros up to the nearest byte.
+    // E.g. if the option is 'false': 0x25 -> 0b100101
+    // E.g. if the option is 'true':  0x25 -> 0b00100101
+    "opt_binary_leading_enable": true,
+
+    // Fill a binary number with a zeros up to the nearest even-counted byte.
+    // E.g. if the option is 'false': 0x25    -> 0b100101
+    // E.g. if the option is 'true':  0x25    -> 0b0000000000100101 (2^1)
+    // E.g. if the option is 'true':  0x2525  -> 0b0010010100100101 (2^1)
+    // E.g. if the option is 'true':  0x22525 -> 0b00000000000000100010010100100101 (2^2)
+    "opt_binary_leading_align": true,
+
+    // The same as previous option but count of bytes, the number will be aligned to, 
+    // can be fixed set. Cancels the option "opt_binary_leading_align" if not zero. 
+    // Settings number is a count of bits! And if the number exceeds that count, 
+    // nothing happens.
+    // Available range is 0 - disable, 1-256 bits
+    "opt_binary_leading_count": 0
+}

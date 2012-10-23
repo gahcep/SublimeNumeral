@@ -1,0 +1,49 @@
+[
+    {
+        "id": "tools",
+        "children":
+        [
+            {
+                "caption": "Numeral",
+                "children":
+                [
+                    { "caption": "Convert", "command": "numeral_convert" }
+                ]
+            }
+        ]
+    }
+
+    ,{
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "N",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Numeral",
+                        "children":
+                        [
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/SublimeNumeral/SublimeNumeral.sublime-settings"},
+                                "caption": "Settings - Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/SublimeNumeral.sublime-settings"},
+                                "caption": "Settings - User"
+                            },
+                            { "caption": "-" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
