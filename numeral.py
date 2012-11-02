@@ -31,7 +31,7 @@ class NumeralConvertCommand(sublime_plugin.TextCommand):
 	match_nan = "[^0-9a-fhx]{1,}"
 
 	def bin2dec(self, bin):
-		return int(bin, 2)
+		return str(int(bin, 2))
 
 	def bin2hex(self, bin):
 		pass
